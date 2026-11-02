@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="服飾商品資料庫查詢 Dashboard">
+  <title>衣物資料庫｜Clothing Store Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="./"><span class="brand-mark">C</span><span>衣物資料庫<small>CLOTHING STORE</small></span></a>
+  <div class="top-note"><span class="live-dot"></span><span id="connectionText">展示資料模式</span></div>
+</header>
+<main class="container">
+  <section class="hero">
+    <div><p class="eyebrow">SMART INVENTORY · 2026</p><h1>找到你的<br><em>日常風格。</em></h1>
+    <p class="hero-copy">整合商品、品牌與庫存資訊，快速探索 60 件精選服飾。</p></div>
+    <div class="hero-stats"><div><strong id="heroCount">60</strong><span>件商品</span></div><div><strong id="brandCount">5</strong><span>個品牌</span></div><div><strong id="categoryCount">6</strong><span>種分類</span></div></div>
+  </section>
+  <section class="toolbar">
+    <div class="search-wrap"><span>⌕</span><input id="searchInput" type="search" placeholder="搜尋商品名稱、品牌或商品編號…"></div>
+    <select id="categoryFilter" aria-label="商品分類"><option value="">所有分類</option></select>
+    <select id="brandFilter" aria-label="品牌"><option value="">所有品牌</option></select>
+    <select id="sortFilter" aria-label="排序"><option value="default">預設排序</option><option value="price-asc">價格：低至高</option><option value="price-desc">價格：高至低</option><option value="name">商品名稱</option></select>
+  </section>
+  <section class="result-line"><span id="resultCount">顯示 60 件商品</span><button id="resetButton" class="reset">清除篩選 ↗</button></section>
+  <section id="productGrid" class="product-grid" aria-live="polite"></section>
+  <div id="emptyState" class="empty hidden">找不到符合條件的商品，試試其他關鍵字。</div>
+  <footer><span>© 2026 CLOTHING STORE DATABASE</span><span>商品資料庫課程專題</span></footer>
+</main>
+<script src="./config.js"></script><script src="./app.js"></script>
+</body></html>
